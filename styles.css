@@ -1,0 +1,270 @@
+/* Include padding and borders in element sizes */
+* {
+    box-sizing: border-box;
+}
+
+/* General page appearance */
+body {
+    margin: 0;
+    background-color: #fff8f0;
+    color: #3b2923;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Headings */
+h1,
+h2,
+h3 {
+    font-family: Georgia, serif;
+    line-height: 1.2;
+}
+
+/* Keep images inside their containers */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Links */
+a {
+    color: #8b3e2f;
+}
+
+/* Visible keyboard focus */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #8b3e2f;
+    outline-offset: 4px;
+}
+/* Header */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem 1rem;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+header img {
+    width: 150px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* Navigation */
+nav {
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    display: block;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+    background-color: #8b3e2f;
+    color: #ffffff;
+}
+/* Main content */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+}
+
+main > section {
+    min-width: 0;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 1.6rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* Product images and captions */
+figure {
+    margin: 1rem 0;
+}
+
+figcaption {
+    margin-top: 0.75rem;
+    font-size: 0.95rem;
+}
+
+picture {
+    display: block;
+}
+
+main img {
+    border-radius: 0.5rem;
+}
+
+/* Footer */
+footer {
+    padding: 1.5rem 1rem;
+    background-color: #3b2923;
+    color: #fff8f0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+/* Form layout */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+fieldset {
+    min-width: 0;
+    margin: 0;
+    padding: 1rem;
+    border: 1px solid #3b2923;
+    border-radius: 0.5rem;
+}
+
+legend {
+    padding: 0 0.5rem;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+/* Form fields */
+input,
+select,
+textarea {
+    width: 100%;
+    min-width: 0;
+    padding: 0.75rem;
+    border: 1px solid #3b2923;
+    border-radius: 0.35rem;
+    background-color: #ffffff;
+    color: #3b2923;
+    font: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Submit button */
+button {
+    min-height: 44px;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #8b3e2f;
+    border-radius: 0.5rem;
+    background-color: #8b3e2f;
+    color: #ffffff;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3b2923;
+    border-color: #3b2923;
+}
+
+/* Audio player */
+audio {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+/* Layout for larger screens */
+@media (min-width: 900px) {
+    header {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+        padding: 1.5rem 2rem;
+    }
+
+    header img {
+        width: 120px;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    nav {
+        width: auto;
+    }
+
+    main {
+        gap: 2rem;
+        padding: 2.5rem 2rem;
+    }
+
+    main > section {
+        padding: 2rem;
+    }
+
+    .products-layout,
+    .contact-layout {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    .products-layout > section {
+        flex: 1 1 280px;
+    }
+
+    .contact-layout > section:first-child {
+        flex: 2 1 480px;
+    }
+
+    .contact-layout > section:last-child {
+        flex: 1 1 240px;
+    }
+}
