@@ -268,3 +268,17 @@ audio {
         flex: 1 1 240px;
     }
 }
+/* Form validation messages */
+.field-error {
+    color: #8b3e2f;
+    font-weight: bold;
+    margin: 0.25rem 0 1rem;
+}
+
+.field-error:empty {
+    display: none;
+}
+
+[aria-invalid="true"] {
+    border: 2px solid #8b3e2f;
+}

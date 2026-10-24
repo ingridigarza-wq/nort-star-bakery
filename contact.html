@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>North Star Bakery | Contact</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
@@ -43,34 +44,37 @@
                 Please use sample information when testing it.
             </p>
 
-            <form action="contact.html" method="get"
-                  aria-describedby="form-note">
+            <form id="contact-form"
+      action="contact.html"
+      method="get"
+      aria-describedby="form-note">
                 <fieldset>
                     <legend>Your Contact Information</legend>
 
                     <p>
-                        <label for="customer-name">
-                            Full name (required)
-                        </label>
-                        <input
-                            type="text"
-                            id="customer-name"
-                            name="customer-name"
-                            autocomplete="name"
-                            required>
+                         <label for="customer-name">Full name (required)</label>
+    <input
+        type="text"
+        id="customer-name"
+        name="customer-name"
+        autocomplete="name"
+        aria-describedby="name-error"
+        required>
                     </p>
 
-                    <p>
-                        <label for="customer-email">
-                            Email address (required)
-                        </label>
-                        <input
-                            type="email"
-                            id="customer-email"
-                            name="customer-email"
-                            autocomplete="email"
-                            required>
-                    </p>
+                    <p id="name-error" class="field-error" aria-live="polite"></p>
+                   <p>
+    <label for="customer-email">Email address (required)</label>
+    <input
+        type="email"
+        id="customer-email"
+        name="customer-email"
+        autocomplete="email"
+        aria-describedby="email-error"
+        required>
+</p>
+
+<p id="email-error" class="field-error" aria-live="polite"></p>
                 </fieldset>
 
                 <fieldset>
@@ -83,11 +87,13 @@
                         <select
                             id="request-type"
                             name="request-type"
+                            aria-describedby="request-error"
                             required>
                             <option value="">Choose a request type</option>
                             <option value="preorder">Preorder request</option>
                             <option value="question">General question</option>
                         </select>
+                        <p id="request-error" class="field-error" aria-live="polite"></p>
                     </p>
 
                     <p>
@@ -107,17 +113,20 @@
                     </p>
 
                     <p>
-                        <label for="item-details">
-                            Item details or question (required)
-                        </label>
-                        <textarea
-                            id="item-details"
-                            name="item-details"
-                            rows="5"
-                            cols="30"
-                            minlength="10"
-                            required></textarea>
-                    </p>
+    <label for="item-details">
+        Item details or question (required)
+    </label>
+    <textarea
+        id="item-details"
+        name="item-details"
+        rows="5"
+        cols="30"
+        minlength="10"
+        aria-describedby="details-error"
+        required></textarea>
+</p>
+
+<p id="details-error" class="field-error" aria-live="polite"></p>
 
                     <p>
                         <label for="allergy-notes">
@@ -142,6 +151,7 @@
                     <button type="submit">Submit demo request</button>
                 </p>
             </form>
+            <p id="form-status" role="status"></p>
         </section>
 
         <section>

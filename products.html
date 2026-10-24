@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>North Star Bakery | Products</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
@@ -46,6 +47,14 @@
                     Our Signature Loaf, a favorite for the family table.
                 </figcaption>
             </figure>
+            <p>
+    <button type="button"
+            class="favorite-button"
+            data-product-id="signature-loaf"
+            aria-pressed="false">
+        Save Signature Loaf
+    </button>
+</p>
         </section>
 
         <section>
@@ -63,6 +72,14 @@
                 <li>Cinnamon rolls with a sweet glaze.</li>
                 <li>Chocolate chip cookies for a sweet treat.</li>
             </ul>
+            <p>
+    <button type="button"
+            class="favorite-button"
+            data-product-id="chocolate-chip-cookie"
+            aria-pressed="false">
+        Save Chocolate Chip Cookie
+    </button>
+</p>
         </section>
 
         <section>
@@ -82,6 +99,32 @@
 
             <p>
                 <a href="contact.html">Request a cake preorder</a>
+            </p>
+            <p>
+    <button type="button"
+            class="favorite-button"
+            data-product-id="celebration-cake"
+            aria-pressed="false">
+         Save Celebration Cake
+    </button>
+</p>
+        </section>
+
+        <section class="favorites-section">
+            <h2>Your Favorites</h2>
+
+            <p>Save items to help plan your next preorder.</p>
+
+            <p id="favorites-status" role="status">
+                No favorites saved yet.
+            </p>
+
+            <ul id="favorites-list"></ul>
+
+            <p id="storage-status" role="status"></p>
+
+            <p>
+                <a href="contact.html">Ask about your favorite items</a>
             </p>
         </section>
     </main>
